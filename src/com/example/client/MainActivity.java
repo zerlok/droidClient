@@ -38,6 +38,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 
 	public void onClick(View v) {
+		Intent intent;
 		switch (v.getId()) {
 		case R.id.loginButton:
 			if (loginEmail.getText().toString().isEmpty()
@@ -46,12 +47,12 @@ public class MainActivity extends Activity implements OnClickListener {
 						Toast.LENGTH_LONG).show();
 				return;
 			}
-			Intent intent = new Intent(this, FeedActivity.class);
+			intent = new Intent(this, FeedActivity.class);
 			startActivity(intent);
 			break;
 		case R.id.signupButton:
-			Intent intent1 = new Intent(this, SignupActivity.class);
-			startActivity(intent1);
+			intent = new Intent(this, SignupActivity.class);
+			startActivity(intent);
 			break;
 		}
 
